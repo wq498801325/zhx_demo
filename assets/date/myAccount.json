@@ -1,0 +1,10 @@
+[
+  {"title": "摄影服务", "date": "2020.12.12", "info": "+4900","type":"add"},
+  {"title": "设计服务", "date": "2020.12.12", "info": "+4900","type":"add"},
+  {"title": "提现", "date": "2020.12.12", "info": "-4900","type":"reduce"},
+  {"title": "购物消费", "date": "2020.12.12", "info": "-1000","type":"reduce"},
+  {"title": "充值会员", "date": "2020.12.12", "info": "-99","type":"reduce"},
+  {"title": "提现", "date": "2020.12.12", "info": "","type":"inReview"},
+  {"title": "提现", "date": "2020.12.12", "info": "","type":"inHand"},
+  {"title": "提现", "date": "2020.12.12", "info": "","type":"notPass"}
+]

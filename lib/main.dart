@@ -21,11 +21,20 @@ class MyApp extends StatelessWidget {
       builder: (_ , child) {
         return GetMaterialApp(
           debugShowCheckedModeBanner: false,
-          theme: ThemeData(
-              appBarTheme: AppBarTheme(scrolledUnderElevation: 0.0)    //这里设置后全局的appbar在滑动时不会变色
+          theme: ThemeData.light().copyWith(
+            //这里设置后全局的appbar在滑动时不会变色
+              appBarTheme: AppBarTheme(scrolledUnderElevation: 0.0),
           ),
-
-          home: child,
+          home: GestureDetector(
+            onTap: () {
+              FocusScopeNode currentFocus = FocusScope.of(context);
+              if (!currentFocus.hasPrimaryFocus &&
+                  currentFocus.focusedChild != null) {
+                FocusManager.instance.primaryFocus!.unfocus();
+              }
+            },
+            child: child,
+          ),
         );
       },
       child: HomePage(),

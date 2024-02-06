@@ -14,6 +14,7 @@ import 'package:flutter/material.dart';
 
 import 'dart:ui' as ui show window;
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:fluwx/fluwx.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:zhx_demo/util/loading.dart';
@@ -24,6 +25,7 @@ export 'package:get/get.dart';
 export 'package:flutter_screenutil/flutter_screenutil.dart';
 export 'package:get/get.dart';
 export 'dart:async';
+export 'package:zhx_demo/common/Icon.dart';
 
 
 // export 'package:flutter_baidu_mapapi_base/flutter_baidu_mapapi_base.dart';
@@ -153,7 +155,7 @@ class G {
   /// @param {Color} color
   /// @param {bool} show  是否显示底部border
   /// ```
-  static Border borderBottom({required Color color, bool show = true}){
+  static Border borderBottom({ Color? color, bool show = true}){
     return Border(
       bottom: BorderSide(
         color: (color == null || !show)  ? (show ? G.colorshex('#DDDDDD') : Colors.transparent) : color,
@@ -279,7 +281,16 @@ class G {
   //   }
   // }
 
+
+//注册微信
+  static registerWX(){
+    Fluwx fluwx = Fluwx();
+    fluwx.registerApi(appId: "wxd930ea5d5a228f5f",universalLink: "https://your.univerallink.com/link/");
+  }
+
 }
+
+
 
 
 

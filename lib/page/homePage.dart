@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:zhx_demo/common/Icon.dart';
+import 'package:zhx_demo/page/loginPage/loginPage.dart';
 import 'package:zhx_demo/util/global.dart';
 
 class HomePage extends StatefulWidget {
@@ -15,7 +17,7 @@ class _HomePageState extends State<HomePage> {
     Container(), //首页
     Container(), //发现页
     Container(), //商城页
-    Container()  //个人主页
+    LoginPage()  //个人主页
   ];
 
 
@@ -25,20 +27,20 @@ class _HomePageState extends State<HomePage> {
 //底部导航-图标和文字定义
   List<BottomNavigationBarItem> items(){
     return [
-      const BottomNavigationBarItem(
-        icon: Icon(Icons.home),
+       BottomNavigationBarItem(
+        icon: iconHome(),
         label: '首页',
       ),
-      const BottomNavigationBarItem(
-        icon: Icon(Icons.find_in_page),
+       BottomNavigationBarItem(
+        icon: iconCompass(),
         label: '发现',
       ),
-      const BottomNavigationBarItem(
-        icon: Icon(Icons.message),
+       BottomNavigationBarItem(
+        icon: iconChat(),
         label: '消息',
       ),
-      const BottomNavigationBarItem(
-        icon: Icon(Icons.local_activity),
+       BottomNavigationBarItem(
+        icon: iconMytabnew(),
         label: '我的',
       ),
     ];
